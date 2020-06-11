@@ -5,7 +5,6 @@ var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var BAR_GAP = 50;
 var GAP = 10;
-var TEXT_HEIGHT = 60;
 var BAR_WIDTH = 40;
 var BAR_HEIGHT_MAX = 150;
 
@@ -51,8 +50,6 @@ window.renderStatistics = function (ctx, players, times) {
     } else {
       ctx.fillStyle = 'hsl(240, ' + i * 25 + '%, 30%)';
     }
-
-
 
 
     ctx.fillRect(cloudX, cloudY, BAR_WIDTH, barHeight);
