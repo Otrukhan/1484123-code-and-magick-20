@@ -1,4 +1,5 @@
 'use strict';
+var wizardNumber = 4;
 var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
 var WIZARD_SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго',' Ирвинг'];
 var COAT_COLOR = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
@@ -19,7 +20,7 @@ Array.prototype.getRandom = function() {
 
   }
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < wizardNumber; i++) {
     var wizard = {
       name: WIZARD_NAMES.getRandom() + ' ' + WIZARD_SURNAMES.getRandom(),
       coatColor: COAT_COLOR.getRandom(),
@@ -37,7 +38,7 @@ var renderWizard = function(wizard) {
   return wizardElement;
 }
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < wizardNumber; i++) {
   fragment.appendChild(renderWizard(wizards[i]));
 
 }
